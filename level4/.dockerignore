@@ -1,0 +1,4 @@
+*
+!package*.json
+!src
+!haproxy.cfg

@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  webapp1:
+    build: .
+    environment: 
+      - PORT=3000
+    command: node ./src/index.js   
+
+  webapp2:
+    build: .
+    environment: 
+      - PORT=4000
+    command: node ./src/index.js   
+  
+  haproxy:
+    image: haproxy:latest
+    volumes:
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+    ports: 
+      - "8000:8000"
+    depends_on: 
+      - webapp1
+      - webapp2
