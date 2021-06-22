@@ -1,0 +1,14 @@
+{
+  "name": "l4-l7-load-balancing",
+  "version": "1.0.0",
+  "description": "Some quick notes and examples on Level 4 and Level 7 load balancing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
